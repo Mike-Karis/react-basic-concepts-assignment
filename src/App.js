@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import Country from './components/Country';
 import Medal from './components/Medal';
+import NewCountry from './components/NewCountry';
 
 class App extends Component{
   state = {
@@ -36,6 +37,16 @@ loseGold = (countryId, medalname) => {
     this.setState({ countries:countriesMutable });
     console.log(countriesMutable)
 }
+handleDelete = (nameId) => {
+  const countries = this.state.countries.filter(c => c.id !== nameId);
+  this.setState({ countries:countries });
+}
+handleAdd = (name) => {
+  const { countries } = this.state;
+  const id = countries.length === 0 ? 1 : Math.max(...countries.map(name => name.id)) + 1;
+  const mutableCountries = countries.concat({ id: id, name: name, gold: 0, silver: 0, bronze: 0 });
+  this.setState({ countries:mutableCountries });
+}
   render () {
   return (
     <div className="App">
@@ -56,9 +67,11 @@ loseGold = (countryId, medalname) => {
             onIncrement={ this.incrementGold } 
             onDecrease={this.loseGold}
             totalMedal={this.getTotalCountryMedalCount(country.name)}
+            deleteCountry={this.handleDelete}
             // onIncrement={this.getTotalMedalCount(gold)}
             />
         )}
+        <NewCountry onAdd={ this.handleAdd }/>
       </header>
       
     </div>
