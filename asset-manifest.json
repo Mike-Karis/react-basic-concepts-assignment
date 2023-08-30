@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-basic-concepts-assignment/static/css/main.073c9b0a.css",
-    "main.js": "/react-basic-concepts-assignment/static/js/main.5c3f9a9f.js",
+    "main.js": "/react-basic-concepts-assignment/static/js/main.db76dffb.js",
     "static/js/787.90baa54a.chunk.js": "/react-basic-concepts-assignment/static/js/787.90baa54a.chunk.js",
     "index.html": "/react-basic-concepts-assignment/index.html",
     "main.073c9b0a.css.map": "/react-basic-concepts-assignment/static/css/main.073c9b0a.css.map",
-    "main.5c3f9a9f.js.map": "/react-basic-concepts-assignment/static/js/main.5c3f9a9f.js.map",
+    "main.db76dffb.js.map": "/react-basic-concepts-assignment/static/js/main.db76dffb.js.map",
     "787.90baa54a.chunk.js.map": "/react-basic-concepts-assignment/static/js/787.90baa54a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.5c3f9a9f.js"
+    "static/js/main.db76dffb.js"
   ]
 }
